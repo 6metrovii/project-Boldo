@@ -1,0 +1,1210 @@
+@import "_vars"
+@import "_mixins"
+*
+    box-sizing: border-box
+    text-decoration: none
+    font-style: normal
+.container
+    padding: 0 15px
+    max-width: 1460px
+    margin: $margin-center
+    position: relative
+.homepage-header
+    min-height: 720px
+    padding: 65px 100px
+    background-color: $bg-blue
+    position: relative
+    .header
+        @include flex-between
+        .logo-block
+            display: flex
+            align-items: center
+            margin-right: 10px
+            .logo
+                width: 50px
+                .logo-element1
+                    width: 80%
+                    height: 1.5vh
+                    background: $button-color
+                    border-radius: 0px 12.0139px 12.0139px 0px
+                .logo-element2
+                    margin-top: 3px
+                    width: 100%
+                    height: 1.5vh
+                    background:$button-color
+                    border-radius: 0px 12.0139px 12.0139px 0px
+            span
+                font-family: 'Manrope'
+                font-weight: 700
+                margin-left: 10px
+                font-size: 40px
+                color: #ffff
+        .main-button
+            width: 128px
+            height: 40px
+            text-align: center
+            background: #FFFFFF
+            color: $bg-blue
+            border-radius: 24px
+            font-family: 'Open Sans'
+            font-weight: 700
+            font-size: 16px
+            transition: all 0.1s linear
+            &:hover
+                background: $button-color
+                color: $bg-blue
+                transform: scale(0.9, 0.9 )
+        .main-block
+            display: flex
+            align-items: center
+            .main-links
+                margin-right: 40px
+                text-decoration: none
+                font-family: 'Open Sans'
+                font-size: 'normal'
+                font-weight: 600
+                font-size: 16px
+                line-height: 28px
+                color: #ffff
+                &:hover
+                    text-decoration: underline
+                    color: #65E4A3
+    .homepage-content
+        @include flex-between
+        .homepage-leftblock
+            margin-top: 120px
+            max-width: 558px
+            display: flex
+            flex-direction: column
+            .leftblock-title
+                margin-bottom: 15px
+                font-family: 'Manrope'
+                font-weight: 400
+                font-size: 48px
+                line-height: 72px
+                color: #FFFFFF
+            .leftblock-descr
+                margin-bottom: 40px
+                font-family: 'Open Sans'
+                font-style: normal
+                font-weight: 400
+                font-size: 16px
+                line-height: 28px
+                color: #F1F1F1
+            .buy-button
+                width: 247px
+                height: 60px
+                background: $button-color
+                border: 2px solid $button-color
+                border-radius: 56px
+                font-family: 'Open Sans'
+                font-size: 20px
+                font-weight: 700
+                color: #0A2640
+                margin-right: 20px
+                transition: all 0.1s linear
+                &:hover
+                    background: $bg-blue
+                    border: 3px solid #ffffff
+                    color:#ffffff
+                    cursor: pointer
+                    transform: scale(0.9, 0.9 )
+            .explore-button
+                width: 247px
+                height: 60px
+                background: #0A2640
+                border: 3px solid #ffffff
+                border-radius: 56px
+                font-family: 'Open Sans'
+                font-size: 20px
+                font-weight: 700
+                color:#ffffff
+                transition: all 0.1s linear
+                &:hover
+                    background: #65E4A3
+                    color: #0A2640
+                    cursor: pointer
+                    border: none
+                    transform: scale(0.9, 0.9 )
+    .homepage-rightblock
+        margin-top: 70px
+        @include flex-column
+        .block-1
+            width: 500px
+            height: 232px
+            background-color:  rgba(255, 255, 255, 0.18)
+            border-radius: 16px
+        .blocks-wrapper
+            @include flex-between
+            .block-2
+                margin: $margin-center
+                width: 40%
+                height: 165.34px
+                background-color:  rgba(255, 255, 255, 0.18)
+                border-radius: 16px
+                position: relative
+            .block-3
+                margin: $margin-center
+                min-width: 55%
+                height: 165.34px
+                background-color:  rgba(255, 255, 255, 0.18)
+                border-radius: 16px
+        .elipses
+            display: flex
+            margin: 14px
+        .elipse1
+            margin-right: 10px
+            width: 9px
+            height: 9px
+            border-radius: 100%
+            background-color: #FC5B00
+        .elipse2
+            margin-right: 10px
+            width: 9px
+            height: 9px
+            border-radius: 100%
+            background-color: #ECAA00
+        .elipse3
+            margin-right: 9px
+            width: 9px
+            height: 9px
+            border-radius: 100%
+            background-color: #009D10
+        .blocks-wrapper
+            display: flex
+            margin-top: 25px
+        .scaleses
+            @include flex-column
+            margin-top: 40px
+        .start-scale 
+            width:  54px
+            height:12px
+            margin-right: 14px
+            background: #95ABBC
+            border-radius: 14px
+        .scaleses > div
+            margin: 0 0 26px 28px
+            display: flex
+            align-items: center
+        .scaleses > div > span 
+            margin-left: 14px
+            font-family: 'Open Sans'
+            font-size: 12px
+            color: #FFFFFF
+        .scale-1
+            width: 270px
+            height: 12px
+            background: #8FB6D5
+            border-radius: 14px
+            animation-name: scale1
+            @include animate-setting-1
+            @keyframes scale1
+                0%
+                    width: 20px
+                25%
+                    width: 20px
+                100%
+                    width: 270px
+        .scale-2
+            width: 80px
+            height: 11px
+            background: #0DBBFC
+            border-radius: 14px
+            animation-name: scale2
+            @include animate-setting-1
+            @keyframes scale2
+                0%
+                    width: 20px
+                25%
+                    width: 20px
+                100%
+                    width: 80px
+        .scale-3
+            width: 320px
+            height: 12px
+            background: #FFFFFF
+            border-radius: 14px
+            animation-name: scale3
+            @include animate-setting-1
+            @keyframes scale3
+                0%
+                    width: 20px
+                25%
+                    width: 20px
+                100%
+                    width: 320px
+        .scale-4
+            width: 250px
+            height: 12px
+            background: $button-color
+            border-radius: 14px
+            animation-name: scale4
+            @include animate-setting-1
+            @keyframes scale4
+                0%
+                    width: 20px
+                25%
+                    width: 20px
+                100%
+                    width: 250px
+        .columns
+            margin-left: 24px
+            width: 140px
+            height: 105px
+            position: relative
+            .scale-column1
+                width: 9px
+                height: 23px
+                background: #0DBBFC
+                border-radius: 13px
+                position: absolute
+                left: 4px
+                top: 85px
+                animation-name: column1
+                @include animate-setting-2
+                @keyframes column1
+                    0%
+                        height: 10px
+                    25%
+                        height: 10px
+                    100%
+                        height: 23px
+            .scale-column2
+                width: 9px
+                height: 13px
+                background: #0DBBFC
+                border-radius: 13px
+                position: absolute
+                left: 20px
+                top:85px
+            .scale-column3
+                width: 9px
+                height: 62px
+                background:#0DBBFC
+                border-radius: 13px
+                position: absolute
+                bottom: 20px
+                left: 37px
+                animation-name: column3
+                @include animate-setting-2
+                @keyframes column3
+                    0%
+                        height: 9px
+                    25%
+                        height: 9px
+                    100%
+                        height: 62px
+            .scale-column4
+                width: 9px
+                height: 43px
+                background: #0DBBFC
+                border-radius: 13px
+                position: absolute
+                bottom: 20px
+                left: 56px
+                animation-name: column4
+                @include animate-setting-2
+                @keyframes column4
+                    0%
+                        height: 9px
+                    25%
+                        height: 9px
+                    100%
+                        height: 43px
+            .scale-column5
+                width: 9px
+                height: 83px
+                background:  #95ABBC
+                border-radius: 13px
+                position: absolute
+                bottom: 20px
+                left: 75px
+                animation-name: column5
+                @include animate-setting-2
+                @keyframes column5
+                    0%
+                        height: 9px
+                    25%
+                        height: 9px
+                    100%
+                        height: 83px
+            .scale-column6
+                width: 9px
+                height: 58px
+                background:   #0DBBFC
+                border-radius: 13px
+                position: absolute
+                bottom: 20px
+                left: 94px
+                animation-name: column6
+                @include animate-setting-2
+                @keyframes column6
+                    0%
+                        height: 9px
+                    25%
+                        height: 9px
+                    100%
+                        height: 58px
+            .scale-column7
+                width: 9px
+                height: 70px
+                background:   #0DBBFC
+                border-radius: 13px
+                position: absolute
+                bottom: 20px
+                left: 112px
+                animation-name: column7
+                @include animate-setting-2
+                @keyframes column7
+                    0%
+                        height: 9px
+                    25%
+                        height: 9px
+                    100%
+                        height: 70px
+            .scale-column8
+                width: 9px
+                height: 32px
+                background:   #0DBBFC
+                border-radius: 13px
+                position: absolute
+                bottom: 20px
+                left: 130px
+                animation-name: column8
+                @include animate-setting-2
+                @keyframes column8
+                    0%
+                        height: 9px
+                    25%
+                        height: 9px
+                    100%
+                        height: 32px
+        .block-3content
+            display: flex
+            align-items: center
+        .block3-spinner
+            margin: 16px 0px 0 25px
+            width: 93px
+            height: 93px
+            border-radius: 100%
+            background: url(/img/spiner.png)
+            animation-name: rotation
+            animation-duration: 3s
+            animation-iteration-count: infinite
+            animation-timing-function: linear
+        @keyframes rotation 
+            0% 
+                transform: rotate(0deg)
+            50%
+                transform: rotate(180deg)
+            100% 
+                transform: rotate(360deg)
+        .block-3scaleses
+            margin: 20px 0 0 32px
+            @include flex-column
+        .scale-5
+            width: 72px
+            height: 8px
+            background: #95ABBC
+            border-radius: 14px
+            margin-bottom: 14px
+            animation-name: scale5
+            animation-duration: 1.7s
+            animation-iteration-count: infinite
+            animation-timing-function: linear
+        @keyframes scale5
+            0%
+                width: 20px
+            50%
+                width: 72px
+            100%
+                width: 20px
+        .scale-6
+            width: 68px
+            height: 8px
+            background: #95ABBC
+            border-radius: 14px
+            margin-bottom: 14px
+            animation-name: scale6
+            animation-duration: 2s
+            animation-iteration-count: infinite
+            animation-timing-function: linear
+        @keyframes scale6
+            0%
+                width: 30px
+            50%
+                width: 68px
+            100%
+                width: 30px
+        .scale-7
+            width: 76px
+            height: 8px
+            background: #95ABBC
+            border-radius: 14px
+            animation-name: scale7
+            animation-duration: 1.5s
+            animation-iteration-count: infinite
+            animation-timing-function: linear
+        @keyframes scale7
+            0%
+                width: 30px
+            50%
+                width: 76px
+            100%
+                width: 30px
+    .homepage-footer
+        margin: 56px auto 0 auto
+        max-width: 1170px
+        height: 94px
+        background: url(/img/footer.png)  no-repeat
+    @media(max-width: 1300px)
+        .header
+            justify-content: center
+        .homepage-content
+            flex-direction: column
+        .homepage-leftblock
+            margin: 120px auto 0 
+        .homepage-rightblock
+            margin: 70px auto 0
+        .homepage-footer
+            width: 100%
+    @media(max-width: 900px)
+        padding: 30px 40px
+        .header .logo-block  span
+            font-size: 25px
+        .header .main-block .main-links
+            font-size: 13px
+        .header .main-block .main-button
+            width: 80px
+        .homepage-content .homepage-leftblock .leftblock-title
+            font-size: 35px
+        .homepage-content .homepage-leftblock .leftblock-buttons
+            margin: $margin-center
+        .homepage-content .homepage-leftblock .leftblock-buttons .buy-button
+            width: 180px
+        .homepage-content .homepage-leftblock .leftblock-buttons .explore-button
+            width: 180px
+    @media(max-width: 650px)
+        .blocks-wrapper
+            margin: $margin-center
+            flex-direction: column
+            width: 90%
+            .block-2
+                width:50%
+            .block-3
+                margin-top: 10px
+                width: 60%
+.services-section
+    .services-name
+        width: 120px
+        height: 32px
+        margin:  82px auto
+        font-family: 'Open Sans'
+        font-style: normal
+        font-size: 20px
+        color: #777777
+        text-align: center
+    .services-title
+        margin: $margin-center
+        max-width: 840px
+        height: 144px
+        font-family: 'Manrope'
+        font-weight: 400
+        font-size: 48px
+        text-align: center
+        color: #000000
+        @media(max-width:800px)
+            font-size: 38px
+    .services-cards
+        max-width: 1200px
+        margin: 80px auto
+        @include flex-between
+        @media(max-width:1000px)
+            flex-direction: column
+    .services-card
+        width: 30%
+        height: 575px
+        @include flex-column
+        @media(max-width:1000px)
+            margin: 10px auto
+            width: 70%
+            height: 70vh
+        .services-card-img
+            height: 90vh
+    .services-card-img
+        width: 90%
+        height: 50vh
+        border-radius: 24px
+        background: url(/img/card1.png) $center-cover
+    .services-card-title
+        font-family: 'Open Sans'
+        color: #000000
+        margin-top: 24px
+        font-weight: 400
+        font-size: 24px
+    .services-card-descr
+        margin-top: 12px
+        font-family: 'Open Sans'
+        font-style: normal
+        font-weight: 400
+        font-size: 20px
+        line-height: 32px
+        color: #777777
+    .services-card-link
+        margin-top: 28px
+        span 
+            font-family: 'Open Sans'
+            font-weight: 700
+            font-size: 20px
+            color: $bg-blue
+            &:hover
+                cursor: pointer
+        i
+            margin-left: 15px
+    .services-card-bottom
+        margin-top: 8px
+        width: 164px
+        height: 1px
+        background: #0A2640
+    .sevices-content
+        max-width: 1200px
+        margin: 150px auto
+        @include flex-column
+    .services-content-block1
+        @include flex-between
+        .block1-info
+            .block1-img
+                max-width: 100%
+                height: 505px
+                border-radius: 24px
+            .block1-info-title
+                max-width: 490px
+                height: 165px
+                font-family: 'Manrope'
+                font-size: 36px
+                color: #000000
+            .block1-info-descr
+                max-width: 450px
+                .block1-info-descr-item
+                    margin: 25px auto
+                    display: flex
+                    align-items: center
+                    span 
+                        font-family: 'Open Sans'
+                        margin-left: 25px
+                        font-style: normal
+                        font-weight: 400
+                        font-size: 20px
+            .block1-info-button
+                margin-top: px
+                width: 210px
+                height: 60px
+                padding-top: 15px
+                background: #0A2640
+                border-radius: 56px
+                color: white
+                font-family: 'Open Sans'
+                font-weight: 700
+                font-size: 20px
+                text-align: center
+                transition: all 0.1s linear
+                &:hover
+                    background-color: $button-color
+                    color: $bg-blue
+                    cursor: pointer
+                    border: none
+                    transform: scale(0.9, 0.9 )
+        @media(max-width: 1250px)
+            flex-direction: column
+            .block1-img
+                margin: 0 auto
+            .block1-info-title
+                margin: 30px auto 0
+                font-size: 30px
+            .block1-info-descr
+                margin: 0 auto
+            .block1-info-descr-item
+                margin: 10px auto
+            .block1-info-button
+                margin: 20px auto 0
+    .services-content-block2
+        margin-top: 225px
+        @include flex-between
+        @media(max-width:1250px)
+            flex-direction: column
+            margin-top: 100px
+            .block2-info-items
+                margin: $margin-center
+            .block2-img
+                margin: 20px auto
+            .block1-info-title
+                margin: $margin-center
+        .block2-info-items
+            @include flex-column
+            
+        .block2-info-item 
+            margin: 24px auto
+            width: 500px
+            height: 70px
+            box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.08)
+            border-radius: 4px
+            display: flex
+            align-items: center
+            span
+                font-family: 'Open Sans'
+                font-weight: 600
+                font-size: 16px
+        .block2-info-title
+                margin: $margin-center
+                max-width: 490px
+                height: 165px
+                font-family: 'Manrope'
+                font-size: 36px
+                color: #000000
+        .block2-img
+            width: 445px
+            height: 525px
+            background: url(/img/contentwoman.jpg) $center-cover
+.template-slider
+    max-width: 1460px
+    min-height: 800px
+    background-color: $bg-blue
+    @media(max-width:1230px )
+        .slides
+            flex-direction: column
+        .slide
+            margin: 20px auto 
+    .template-slider-header
+        max-width: 1000px
+        margin: $margin-center
+        padding-top: 100px
+        @include flex-between-center
+        .template-slider-title
+            max-width: 720px
+            height: 140px
+            font-family: 'Manrope'
+            font-size: 48px
+            color: #FFFFFF
+        .template-slider-buttons
+            display: flex
+            margin-right: 15px
+            .prew-button
+                margin-right: 28px
+                width: 72px
+                height: 72px
+                border-radius: 100%
+                background: url(/img/prew.png) $center-cover
+                transition: all 0.1s linear
+                &:hover
+                    cursor: pointer 
+                    transform: scale(0.9, 0.9 )
+            .next-button
+                width: 72px
+                height: 72px
+                border-radius: 100%
+                background: url(/img/next.png) $center-cover
+                transition: all 0.1s linear
+                &:hover
+                    cursor: pointer
+                    transform: scale(0.9, 0.9 )
+        @media(max-width:1000px)
+            flex-direction: column
+            margin: $margin-center
+            .template-slider-title
+                padding: 10px
+                font-size: 30px
+                text-align: center
+            .template-slider-buttons .prew-button
+                width: 50px
+                height: 50px
+            .template-slider-buttons .next-button
+                width: 50px
+                height: 50px
+    .slides
+        max-width: 100%
+        margin: 70px auto
+        display: flex
+        .slide
+            margin: 20px auto
+            width: 350px
+            height: 322px
+            background-color: #FFFFFF
+            border-radius: 12px
+            .slide-content
+                margin: 40px
+                @include flex-column
+            .slide-descr
+                font-family: 'Open Sans'
+                font-size: 24px
+            .slide-user
+                margin-top: 40px
+                display: flex
+                .user-img
+                    width: 58px
+                    height: 58px
+                    border-radius: 100%
+                    background: url(/img/user1.png) $center-cover
+                .user-data
+                    margin-left: 12px
+                    @include flex-column
+                    .user-name
+                        margin-bottom: 6px
+                        font-family: 'Open Sans'
+                        font-weight: 700
+                        font-size: 16px
+                        color: $bg-blue
+                    .user-mail
+                        font-family: 'Open Sans'
+                        font-weight: 400
+                        font-size: 14px
+                        color: $bg-blue
+        .active-slide
+            height: 392px
+.ourblog-section
+    @media(max-width:1200px)
+        .promo-content
+            flex-direction: column
+        .quess-item
+            margin: 40px auto 0
+    span 
+        display: block
+        margin: $margin-center
+    .ourblog-promo
+        margin: $margin-center
+        .promo-img
+            max-width: 960px
+            margin: $margin-center
+            img
+                width: 100%
+                margin: 120px auto
+                height: 60%
+        .promo-content
+            margin: $margin-center
+            max-width: 1100px
+            @include flex-between-center
+            .promo-descr
+                width: 500px
+                height: 164px
+                font-family: 'Manrope'
+                font-size: 36px
+            .quess-item
+                margin-bottom: 6px
+                @include flex-between-center
+                span 
+                    font-family: 'Open Sans'
+                    font-size: 20px
+                i 
+                    margin-left: 90px
+                    font-size: 20px
+                    color: $bg-blue
+            .quess-item-bottom
+                margin-bottom: 30px
+                width: 500px
+                height: 1px
+                background: #C4C4C4
+.ourteam-cards
+    margin:$margin-center
+    @include flex-column
+    .cards-title
+        margin: $margin-center
+        max-width: 840px
+        height: 140px
+        font-family: 'Manrope'
+        font-style: normal
+        font-size: 48px
+        text-align: center
+        @media(max-width:1070px)
+            font-size: 35px
+    .hiden
+        display: none
+    .show
+        display: block
+    .wrap
+        flex-wrap: wrap
+    .cads-wrapper
+        margin: $margin-center
+        display: flex
+        max-width: 100%
+        @media(max-width:1070px)
+            flex-direction: column
+        .ourteam-card
+            width: 28%
+            margin-right: 50px
+            margin-bottom: 20px
+            .ourteam-card-img
+                width: 100%
+                height: 240px
+                background: url(/img/card4.png) $center-cover
+                border-radius: 12px
+            .card-category
+                margin-bottom: 12px
+                display: flex
+                margin-top: 24px
+                font-family: 'Open Sans'
+                font-size: 16px
+                color: #777777
+                span 
+                    font-family: 'Open Sans'
+                    font-weight: 700
+                    font-size: 16px
+                    color: $bg-blue
+            .card-descr
+                margin-bottom: 20px
+                width: 100%
+                height: 99px
+                font-family: 'Open Sans'
+                font-size: 20px
+            .card-user
+                display: flex
+                align-items: center
+                .user-avatar
+                    width: 3vw
+                    height: 3vw
+                    border-radius: 100%
+                    background: url(/img/user4.png) $center-cover
+                .user-name
+                    margin-left: 12px
+                    font-family: 'Open Sans'
+                    font-style: normal
+                    font-weight: 400
+                    font-size: 16px
+            @media(max-width:1070px)
+                margin: 20px auto
+                width: 50%
+                .ourteam-card-img
+                    width: 40vw
+                    height: 40vh
+                .card-category
+                    font-size: 20px
+                    width: 100%
+                .card-descr
+                    font-size: 22px
+                    width: 100%
+                .card-user
+                    margin-top: 10px
+.ourteam-button
+    margin: 60px auto
+    width: 220px
+    height: 60px
+    padding-top: 10px
+    border: 3px solid $bg-blue
+    border-radius: 56px
+    text-align: center
+    font-family: 'Open Sans'
+    font-style: normal
+    font-weight: 700
+    font-size: 20px
+    background-color: #FFFFFF
+    transition: all 0.1s linear
+    &:hover
+        background-color: $bg-blue
+        color: #ffffff
+        cursor: pointer
+        transform: scale(0.9, 0.9)
+.section-name
+    width: 83px
+    height: 32px
+    margin:  0 465px
+    font-family: 'Open Sans'
+    font-style: normal
+    font-weight: 400
+    font-size: 20px
+    color: #777777
+.ourteam-formblock
+    margin: 120px auto 
+    max-width: 1200px
+    min-height: 390px
+    background: $bg-blue
+    border-radius: 12px
+    @include flex-column
+    position: relative
+    overflow: hidden
+    .formblock-title
+        max-width: 716px
+        height: 140px
+        margin: 72px auto 50px 
+        font-family: 'Manrope'
+        font-style: normal
+        font-weight: 400
+        font-size: 48px
+        text-align: center
+        color: #FFFFFF
+        z-index: 3
+    .form-elipse
+        width: 1293px
+        height: 1293px
+        border-radius: 100%
+        position: absolute
+        top: -1054px
+        left: 466px
+        background: $bg-blue
+        z-index: 1
+    .formblock
+        width: 90%
+        display: flex
+        justify-content: space-evenly
+        margin: $margin-center
+        .form-input
+            width: 370px
+            height: 56px
+            padding-left: 30px
+            background-color: #ffffff
+            border-radius: 240px
+            font-family: 'Open Sans'
+            font-style: normal
+            font-weight: 400
+            font-size: 20px
+            outline: none
+        .form-button
+            width: 210px
+            height: 60px
+            background: $button-color
+            border-radius: 56px
+            font-family: 'Open Sans'
+            font-style: normal
+            font-weight: 700
+            font-size: 20px
+            color: $bg-blue
+            transition: all 0.1s linear
+            &:hover
+                background-color: $bg-blue
+                color: #FFFFFF
+                border: 3px #ffffff solid
+                cursor: pointer
+                transform: scale(0.9, 0.9)
+    @media(max-width: 900px)
+        padding: 10px
+        .formblock-title
+            margin: 30px auto
+            font-size: 30px
+        .form-elipse
+            left: 166px
+        .formblock .form-input
+            width: 240px
+            font-size: 16px
+        .formblock .form-button
+            width: 140px
+            font-size: 15px
+    @media(max-width: 550px)
+        .formblock
+            flex-direction: column
+            .form-input
+                margin: $margin-center
+                margin-bottom: 10px
+            .form-button
+                margin: $margin-center
+        .form-elipse
+            left: 10px
+.footer
+    max-width: 1200px
+    height: 475px
+    margin: 180px auto 0
+    @include flex-between
+    align-items: flex-start
+    .logo-block2
+        margin: $margin-center
+        width: 50%
+        @include flex-column
+        .logo-header
+            display: flex
+            align-items: center
+            span
+                margin-left: 10px
+                font-family: 'Manrope'
+                font-style: normal
+                font-weight: 700
+                font-size: 43px
+                color: $bg-blue
+            .logo-elements1
+                width: 18px
+                height: 13px
+                background: #0A2640
+                border-radius: 0px 12.0139px 12.0139px 0px
+            .logo-elements2
+                margin-top: 3px
+                width: 26px
+                height: 18px
+                background: $bg-blue
+                border-radius: 0px 12.0139px 12.0139px 0px
+        .logo-descr
+            margin-top: 40px
+            width: 80%
+            height: 100%
+            font-family: 'Open Sans'
+            font-style: normal
+            font-size: 16px
+            color: #777777
+        span
+            font-family: 'Open Sans'
+            font-style: normal
+            font-size: 16px
+            color: #777777
+    .link-block
+        margin: $margin-center
+        width: 50%
+        position: relative
+        @include flex-between
+        margin-right: 100px
+        .links-column
+            @include flex-column
+            .link-header
+                font-family: 'Open Sans'
+                font-style: normal
+                font-weight: 700
+                font-size: 20px
+                margin-bottom: 60px
+            .link-item
+                margin-bottom: 35px
+                font-family: 'Open Sans'
+                font-style: normal
+                font-size: 20px
+                color: #777777
+                transition: all 0.1s linear
+                &:hover
+                    font-weight: 700
+                    color: #0A2640
+                    cursor: pointer
+                    text-decoration: underline
+            #item-hiring
+                display: flex
+                .link-hiring
+                    width: 72px
+                    height: 30px
+                    margin-left: 3px
+                    padding-top: 4px
+                    width: 72px
+                    background: $button-color
+                    border-radius: 120px
+                    color: $bg-blue
+                    font-family: 'Open Sans'
+                    font-weight: 700
+                    font-size: 13px
+                    text-align: center
+    @media(max-width:900px)
+        flex-direction: column
+        margin-top: 100px
+        .logo-block2
+            margin-bottom: 30px
+        .link-block
+            width: 100%
+.hiden
+    display: none
+.show
+    display: flex
+    animation-name: show
+    animation-duration: 0.2s
+    animation-iteration-count:1
+    animation-timing-function: linear
+    @keyframes show
+        0%
+            transform: scale(0, 0)
+        100%
+            transform: scale(1, 1)
+.modal
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0, 0, 0, 0.621)
+    z-index: 5
+    .modal-dialog
+        background-color: $bg-blue
+        margin:  200px auto 
+        width: 30%
+        height: 35vh
+        border-radius: 10px
+        border: 3px #002162 solid
+        overflow: hidden
+        position: relative
+        .modal-form
+            margin: $margin-center
+            @include flex-column
+            .modal-title
+                margin: 40px auto
+                color: white
+                font-family: 'Open sans'
+                font-size: 34px
+                z-index: 4
+            .modal-name
+                margin: 10px auto
+                width: 80%
+                height: 40px
+                border-radius: 10px
+                font-family: 'Open sans'
+                color: $bg-blue
+                font-size: 20px
+                padding: 0 40px
+                outline: none
+                position: relative
+                z-index: 4
+            .modal-email
+                margin: 10px auto
+                width: 80%
+                height: 40px
+                border-radius: 10px
+                font-family: 'Open sans'
+                color: $bg-blue
+                font-size: 20px
+                padding: 0 40px
+                outline: none
+                position: relative
+                z-index: 4
+            .modal-button
+                margin: 20px auto 0
+                width: 40%
+                height: 50px
+                border-radius: 10px
+                border: 3px  #0e7ce2 solid
+                background-color: #ffffff
+                color: $bg-blue
+                font-family: 'Open sans'
+                font-size: 22px
+                font-weight: 600
+                transition: all 0.1s linear
+                position: relative
+                z-index: 4
+                &:hover
+                    background-color: $button-color
+                    transform: scale(0.95, 0.95)
+            .modal-close
+                font-size: 35px
+                font-weight: 600
+                color: #ffffff
+                transition: all 0.1s linear
+                position: absolute
+                top: 15px
+                right: 20px
+                z-index: 6
+                &:hover
+                    cursor: pointer
+                    color: red
+                    transform: scale(0.9, 0.9)
+                    font-weight: 700
+        .modal-elipse1
+            width: 500px
+            height: 500px
+            left: -100px
+            top:   200px
+            position: absolute
+            border-radius: 100%
+            background-color: #1C3D5B
+            z-index: 1
+        .modal-elipse2
+            width: 800px
+            height: 800px
+            left: 200px
+            top: -630px
+            position: absolute
+            border-radius: 100%
+            background-color: #1C3D5B
+            z-index: 1       
+.services-name
+    width: 120px
+    height: 32px
+    margin:  82px auto
+    font-family: 'Open Sans'
+    font-style: normal
+    font-size: 20px
+    color: #777777
+    text-align: center
