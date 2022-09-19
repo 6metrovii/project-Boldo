@@ -54,6 +54,11 @@
                 background: $button-color
                 color: $bg-blue
                 transform: scale(0.9, 0.9 )
+        .login-btn
+            width: 140px
+            height: 50px
+            background: $button-color
+            border: 3px #053dae  solid
         .main-block
             display: flex
             align-items: center
@@ -68,7 +73,7 @@
                 color: #ffff
                 &:hover
                     text-decoration: underline
-                    color: #65E4A3
+                    color: $button-color
     .homepage-content
         @include flex-between
         .homepage-leftblock
@@ -551,11 +556,14 @@
         line-height: 32px
         color: #777777
     .services-card-link
+        display: flex
+        align-items: center
         margin-top: 28px
         span 
             font-family: 'Open Sans'
             font-weight: 700
             font-size: 20px
+            margin-right: 25px
             color: $bg-blue
             &:hover
                 cursor: pointer
@@ -667,8 +675,9 @@
             background: url(/img/contentwoman.jpg) $center-cover
 .template-slider
     max-width: 1460px
-    min-height: 800px
+    min-height: 820px
     background-color: $bg-blue
+    overflow: hidden
     @media(max-width:1230px )
         .slides
             flex-direction: column
@@ -720,46 +729,54 @@
             .template-slider-buttons .next-button
                 width: 50px
                 height: 50px
-    .slides
-        max-width: 100%
-        margin: 70px auto
+    .slides-inner
         display: flex
-        .slide
-            margin: 20px auto
-            width: 350px
-            height: 322px
-            background-color: #FFFFFF
-            border-radius: 12px
-            .slide-content
-                margin: 40px
-                @include flex-column
-            .slide-descr
-                font-family: 'Open Sans'
-                font-size: 24px
-            .slide-user
-                margin-top: 40px
-                display: flex
-                .user-img
-                    width: 58px
-                    height: 58px
-                    border-radius: 100%
-                    background: url(/img/user1.png) $center-cover
-                .user-data
-                    margin-left: 12px
+        .slides
+            width: 100%
+            margin: 70px auto
+            display: flex
+            .slide
+                margin: 20px auto
+                width: 360px
+                height: 322px
+                background-color: #FFFFFF
+                border-radius: 12px
+                transition: $transBtn
+                &:hover
+                    cursor: pointer
+                    transform: scale(1.05)
+                .slide-content
+                    margin: 40px
                     @include flex-column
-                    .user-name
-                        margin-bottom: 6px
-                        font-family: 'Open Sans'
-                        font-weight: 700
-                        font-size: 16px
-                        color: $bg-blue
-                    .user-mail
-                        font-family: 'Open Sans'
-                        font-weight: 400
-                        font-size: 14px
-                        color: $bg-blue
-        .active-slide
-            height: 392px
+                .slide-descr
+                    font-family: 'Open Sans'
+                    font-size: 24px
+                .slide-user
+                    margin-top: 40px
+                    display: flex
+                    .user-img
+                        width: 58px
+                        height: 58px
+                        border-radius: 100%
+                        background: url(/img/user1.png) $center-cover
+                    .user-data
+                        margin-left: 12px
+                        @include flex-column
+                        .user-name
+                            margin-bottom: 6px
+                            font-family: 'Open Sans'
+                            font-weight: 700
+                            font-size: 16px
+                            color: $bg-blue
+                        .user-mail
+                            font-family: 'Open Sans'
+                            font-weight: 400
+                            font-size: 14px
+                            color: $bg-blue
+            .active-slide
+                height: 400px
+                border: 5px #5c778e solid
+                transform: scale(1.1)
 .ourblog-section
     @media(max-width:1200px)
         .promo-content
@@ -772,11 +789,11 @@
     .ourblog-promo
         margin: $margin-center
         .promo-img
-            max-width: 960px
+            max-width: 1100px
             margin: $margin-center
             img
                 width: 100%
-                margin: 120px auto
+                margin: 120px auto 55px
                 height: 60%
         .promo-content
             margin: $margin-center
@@ -803,10 +820,11 @@
                 height: 1px
                 background: #C4C4C4
 .ourteam-cards
-    margin:$margin-center
-    @include flex-column
+    margin: $margin-center
+    max-width: 1100px
+    @include  flex-column-center
     .cards-title
-        margin: $margin-center
+        margin: 0 auto 75px
         max-width: 840px
         height: 140px
         font-family: 'Manrope'
@@ -823,8 +841,8 @@
         flex-wrap: wrap
     .cads-wrapper
         margin: $margin-center
-        display: flex
-        max-width: 100%
+        @include flex-between
+        width: 100%
         @media(max-width:1070px)
             flex-direction: column
         .ourteam-card
@@ -862,6 +880,10 @@
                     height: 3vw
                     border-radius: 100%
                     background: url(/img/user4.png) $center-cover
+                .user2
+                    background: url(/img/user5.png) $center-cover
+                .user3
+                    background: url(/img/user6.png) $center-cover
                 .user-name
                     margin-left: 12px
                     font-family: 'Open Sans'
@@ -887,7 +909,7 @@
     width: 220px
     height: 60px
     padding-top: 10px
-    border: 3px solid $bg-blue
+    border: 4px solid $bg-blue
     border-radius: 56px
     text-align: center
     font-family: 'Open Sans'
@@ -930,15 +952,6 @@
         text-align: center
         color: #FFFFFF
         z-index: 3
-    .form-elipse
-        width: 1293px
-        height: 1293px
-        border-radius: 100%
-        position: absolute
-        top: -1054px
-        left: 466px
-        background: $bg-blue
-        z-index: 1
     .formblock
         width: 90%
         display: flex
@@ -972,6 +985,14 @@
                 border: 3px #ffffff solid
                 cursor: pointer
                 transform: scale(0.9, 0.9)
+    .form-elipse
+        width: 1293px
+        height: 1293px
+        border-radius: 100%
+        position: absolute
+        top: -1054px
+        left: 466px
+        background: #1C3D5B
     @media(max-width: 900px)
         padding: 10px
         .formblock-title

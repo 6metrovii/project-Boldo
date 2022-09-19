@@ -21,6 +21,7 @@
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-dart-sass": "^1.0.2",
+    "jquery": "^3.6.1",
     "node-sass": "^7.0.1"
   }
 }
